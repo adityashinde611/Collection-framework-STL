@@ -75,3 +75,33 @@ Autoboxing & Unboxing
   The automatic conversion of primitive types to the object of their corresponding wrapper classes is known as autoboxing. For example - conversion of int to integer, long to Long double to Double, etc.
 
   It is just the reverse process of autoboxing. Automatically converting an object of a wrapper class to its corresponding primitive type is known as unboxing.For example - conversion of integer to int, Long to long, Double to double, etc.
+
+Generics 
+
+Generics means parameterized types. Using Generics, it is possible to create classes that work with different data types. An entity such as class, interface, or method that operates on a parameterized type is a generic entity.
+
+//create a generics class
+class GenericsClass<T>
+{
+  private T data;
+  public GenericsClass(T data)
+  {
+    this.data = data;
+  }
+
+  public T getData()
+  {
+    return this.data;
+  }
+}
+
+Java Generics Method 
+Similar to the generics class, we can also create a method that can be used with any type of data. Such a class is known as Generics Method.
+
+  public <T> void genericMethod(T data) {...}
+
+Here, the type parameter <T> is inserted after the modifier public and before the return type void.
+We can call the generics method by placing the actual type <String> and <integer> inside the bracket before the method name.
+
+  demo.<String>genericMethod("Java Programming");
+  demo.<Integer>genericMethod(25);
